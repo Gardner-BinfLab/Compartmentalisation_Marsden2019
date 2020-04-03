@@ -1,27 +1,39 @@
-##Generating genome lengths, gene counts and number of regulators for the Compartmentalisation Marsden 2019 proposal 
+#Generating genome lengths, gene counts and number of regulators for the Compartmentalisation Marsden 2019 proposal 
 As organisms increase in size, they also increase in complexity. Does having an increased number of cellular compartments help with keeping genes apart? 
 
+#Downloading data
 
-##Downloading data
 Ensembl and Ensembl genomes FTP sites were downloaded and used
 ```bash
 nohup wget -r --no-parent $site &
 ```
 sites: 
 ftp://ftp.ensemblgenomes.org/pub/release-43/bacteria/gtf/bacteria_0_collection/
+
 ftp://ftp.ensemblgenomes.org/pub/release-43/fungi/gtf/
+
 ftp://ftp.ensemblgenomes.org/pub/release-43/plants/gtf/
+
 ftp://ftp.ensembl.org/pub/release-96/gtf/
+
 ftp://ftp.ensemblgenomes.org/pub/release-43/bacteria/gff/bacteria_0_collection/
+
 ftp://ftp.ensemblgenomes.org/pub/release-43/fungi/gff/
+
 ftp://ftp.ensemblgenomes.org/pub/release-43/plants/gff/
+
 ftp://ftp.ensembl.org/pub/release-96/gff/
+
 ftp://ensemblgenomes.org/pub/release-43/bacteria/fasta/bacteria_0_collection/
-ftp://ensemblgenomes.org/pub/release-43/plants/fasta/    
+
+ftp://ensemblgenomes.org/pub/release-43/plants/fasta/  
+
 ftp://ensemblgenomes.org/pub/release-43/fungi/fasta/ 
+
 ftp://ftp.ensembl.org/pub/release-96/fasta/
 
-##Getting gene number and genome length
+
+#Getting gene number and genome length
 Counts the number of genes in a .gtf file
 counting_genes.sh 
 
@@ -30,7 +42,7 @@ creates a file containing the organism name and the genome length
 get_genome_length.sh 
 
 
-##Predicting number of regulatory genes in each organism 
+#Predicting number of regulatory genes in each organism 
 pfam2go retrieved from: 
 http://current.geneontology.org/ontology/external2go/pfam2go 
 
